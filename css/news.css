@@ -1,0 +1,321 @@
+@charset "utf-8";
+@media screen and (max-width:599.9px) {
+.flexbox {
+    flex-wrap: wrap; /* 画面幅に合わせてカラム落ちさせる */
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flexbox section {
+    width: 100%;/* お好みの幅で指定 */
+	text-align: left;
+    /* paddingと合わせてbox-sizingも指定 */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#list section {
+	margin-bottom: 4rem;
+}
+
+/* 最後のコンテンツを左寄せにする指定 */
+.flexbox:after {
+    content: "";
+    display: block;
+    width: 100%;  /* .boxに指定したwidthと同じ幅を指定する */
+    height: 0;
+}
+
+.flexbox section a {
+	display: block;
+	transition: 0.3s;
+	text-decoration: none;
+	color: #313131;
+}
+
+.flexbox section a:hover {
+	opacity: 0.6;
+}
+
+.flexbox section img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.flexbox section div {
+	height: 5rem;
+	margin-top: 0.5rem;
+}
+
+.morelink{
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 4rem;
+	width: 16rem;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #fff;
+	background-color: #313131;
+	transition: 0.3s;
+}
+.morelink:hover{
+	opacity: 0.5;
+}
+}
+
+@media screen and (min-width:600px) and (max-width:899.9px) {
+.works .base {
+	max-width: 60rem;
+	height: 7rem;
+	line-height: 7rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.works .base h2 {
+	float: left;
+}
+
+.works #category {
+	margin-top: -5rem;
+}
+
+.flexbox {
+    flex-wrap: wrap; /* 画面幅に合わせてカラム落ちさせる */
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+	max-width: 60rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flexbox section {
+    width: 50%;/* お好みの幅で指定 */
+	text-align: left;
+    /* paddingと合わせてbox-sizingも指定 */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+#list section {
+	margin-bottom: 4rem;
+}
+
+.flexbox section:nth-of-type(2n-1) {
+	padding-right: 1.5rem;
+}
+
+.flexbox section:nth-of-type(2n) {
+	padding-left: 1.5rem;
+}
+
+/* 最後のコンテンツを左寄せにする指定 */
+.flexbox:after {
+    content: "";
+    display: block;
+    width: 50%;  /* .boxに指定したwidthと同じ幅を指定する */
+    height: 0;
+}
+
+.flexbox section a {
+	display: block;
+	transition: 0.3s;
+	text-decoration: none;
+	color: #313131;
+}
+
+.flexbox section a:hover {
+	opacity: 0.5;
+}
+
+.flexbox section img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.flexbox section div {
+	height: 5rem;
+	margin-top: 0.5rem;
+}
+
+
+.morelink{
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5rem;
+	width: 20rem;
+	margin-bottom: 5rem;
+	margin-top: 2rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #fff;
+	background-color: #313131;
+	transition: 0.3s;
+}
+.morelink:hover{
+	opacity: 0.5;
+}
+}
+
+
+@media screen and (min-width:900px) {
+.works .base {
+	max-width: 90rem;
+	height: 8rem;
+	line-height: 8rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.works .base h2 {
+	float: left;
+}
+
+.works #category {
+	margin-top: -5rem;
+}
+
+.flexbox {
+    flex-wrap: wrap; /* 画面幅に合わせてカラム落ちさせる */
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+	max-width: 90rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flexbox section {
+    width: 33.33%;/* お好みの幅で指定 */
+	text-align: left;
+    /* paddingと合わせてbox-sizingも指定 */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+#list section {
+	margin-bottom: 4rem;
+}
+
+.flexbox section:nth-of-type(3n) {
+	padding-left: 2rem;
+}
+
+.flexbox section:nth-of-type(3n-1) {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+	
+.flexbox section:nth-of-type(3n-2) {
+	padding-right: 2rem;
+}
+
+/* 最後のコンテンツを左寄せにする指定 */
+.flexbox:after {
+    content: "";
+    display: block;
+    width: 33.33%;  /* .boxに指定したwidthと同じ幅を指定する */
+    height: 0;
+}
+
+.flexbox section a {
+	display: block;
+	transition: 0.3s;
+	text-decoration: none;
+	color: #313131;
+}
+
+.flexbox section a:hover {
+	opacity: 0.5;
+}
+
+.flexbox section img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.flexbox section div {
+	height: 5rem;
+	margin-top: 0.5rem;
+}
+
+
+.morelink{
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5rem;
+	width: 20rem;
+	margin-bottom: 5rem;
+	margin-top: 2rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #fff;
+	background-color: #313131;
+	transition: 0.3s;
+}
+.morelink:hover{
+	opacity: 0.5;
+}
+}
+
+.news h5 {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	height: 2rem;
+	margin-bottom: 0.3rem;
+}
+
+.news .exhibition {
+	text-align: center;
+	width: 7rem;
+	margin-right: 0.6rem;
+	color: #fff;
+	background-color: #4169e1;
+}
+
+.news .info {
+	text-align: center;
+	width: 4rem;
+	margin-right: 0.6rem;
+	color: #fff;
+	background-color: #dc143c;
+}
+
+.news h3 {
+	line-height: 2.2rem;
+}

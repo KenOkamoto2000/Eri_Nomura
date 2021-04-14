@@ -1,0 +1,200 @@
+@charset "utf-8";
+@media screen and (max-width:599.9px) {
+.frame {
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}	
+
+.frame img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.name {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4rem;
+}
+
+.name p {
+	font-size: 2.4rem;
+	padding-bottom: 1rem;
+}
+
+.name h4 {
+	padding-bottom: 1rem;
+}
+
+.table {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.table .title {
+	height: 2rem;
+	padding-bottom: 2rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.table .year, .table .performance {
+	height: 3.2rem;
+	line-height: 3.2rem;
+	text-align: left;
+	vertical-align: top;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.table .year {
+	width: 5rem;
+}
+}
+	
+@media screen and (min-width:600px) and (max-width:899.9px) {
+.frame {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60rem;
+}	
+
+.frame img {
+	width: 100%;
+}
+
+.name {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.name p {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+
+.name h4 {
+	padding-bottom: 1rem;
+}
+
+.table {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.table .title {
+	width: 60rem;
+	height: 2rem;
+	padding-bottom: 2rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.table .dummy {
+	width: 0rem;
+}
+
+
+.table .year, .table .performance {
+	height: 3.6rem;
+	line-height: 3.6rem;
+	text-align: left;
+	vertical-align: top;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.table .year {
+	width: 6rem;
+}
+
+.table .performance {
+	width: 54rem;
+}
+}
+	
+@media screen and (min-width:900px){
+.frame {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60rem;
+}	
+
+.frame img {
+	width: 100%;
+}
+
+.name {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.name p {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+
+.name h4 {
+	padding-bottom: 1rem;
+}
+
+.table {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.table .title {
+	width: 90rem;
+	height: 2rem;
+	padding-bottom: 2rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.table .dummy {
+	width: 0rem;
+}
+
+
+.table .year, .table .performance {
+	height: 3.6rem;
+	line-height: 3.6rem;
+	text-align: left;
+	vertical-align: top;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.table .year {
+	width: 6rem;
+}
+
+.table .performance {
+	width: 84rem;
+}
+}
+
+.contents .profile {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.contents #exhibitions, .contents #public-collection {
+	margin-right: calc(50% - 50vw);
+	margin-left: calc(50% - 50vw);
+	padding-right: calc(50vw - 50%);
+	padding-left: calc(50vw - 50%);
+	background-color: #e6e7e8;
+}

@@ -1,0 +1,593 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;		
+}
+
+/* 全体設定*/
+html, body {
+	height: 100%;
+	background-color: white;
+	font-family: 'Jost', "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+	color: #313131;
+	font-size: 10px;
+	line-height: 2rem;
+}
+
+h1 {
+	font-size: 2.4rem;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+h5 {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+ul {
+	list-style: none;
+}
+
+@media screen and (max-width:599.9px) {
+.header {
+	display: flex;
+	position: fixed;
+	z-index: 98;
+	justify-content: space-between;
+	align-items: center;
+	text-align:center;
+	width: 100%;
+	height: 4.5rem;
+	background-color: #fff;
+}
+
+main {
+	padding-top: 4.5rem;
+}
+
+.logo a {
+	vertical-align: top;
+	font-size: 2.7rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: #313131;
+	margin-left: 1.5rem;
+}
+
+.hidden {
+	display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.open {
+	display: flex;
+	height: 4.5rem;
+	width: 6rem;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 100;/* 重なり順を一番上に */
+	cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.open span,
+.open span:before,
+.open span:after {
+	content: '';
+	display: block;
+	height: 0.2rem;
+	width: 2.4rem;
+	border-radius: 0.2rem;
+	background: #313131;
+	transition: 0.3s;
+	position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.open span:before {
+	bottom: 0.8rem;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.open span:after {
+	top: 0.8rem;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#check:checked ~ .open span {
+	background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#check:checked ~ .open span::before {
+	bottom: 0;
+	transform: rotate(45deg);
+}
+
+#check:checked ~ .open span::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#check:checked ~ .nav-contents {
+	left: 0;/* メニューを画面に入れる */
+}
+
+/* メニューのデザイン*/
+.nav-contents {
+	text-align: center;
+	width: 100%;
+	height: 30rem;
+	margin-top: 4.5rem;
+	position: fixed;
+	top: 0;
+	left: 100%;/* メニューを画面の外に飛ばす */
+	z-index: 99;
+	background: #fff;
+	transition: 0.3s;
+}
+
+.background {
+    visibility: hidden;
+	position: fixed;
+	z-index: 98;
+	top: 5rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s;
+	opacity: 0;
+}
+
+#check:checked ~ .background {
+	visibility: visible;
+	background: #000;
+	opacity: 0.5;
+}
+
+.nav-contents nav {
+	margin-top: 1.8rem;
+}
+
+nav .item {
+	height: 2.5rem;
+	margin-bottom: 1.8rem;
+}
+
+.item a {
+	font-weight: 500;
+	text-decoration: none;
+	color: #313131;
+	transition: 0.3s;
+	display: inline-block;
+}
+
+.item a:hover {
+	opacity: 0.5;
+}
+
+.icon-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.drawer-icon {
+	display: inline-block;
+}
+
+.drawer-icon .icon {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	font-size: 2rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: #313131;
+	transition: 0.3s;
+}
+
+.drawer-icon .icon:hover {
+	color: red;
+}
+
+.drawer-icon .centerline {
+	width: 0.2rem;
+	height: 2.5rem;
+	background-color: #313131;
+}
+
+.menu, .leftbar, .rightbar {
+	display: none;
+}
+}
+
+@media screen and (min-width:600px) and (max-width:899.9px) {
+.hamburger {
+	display: none;
+}
+
+.header {
+	text-align: center;
+	width: 100%;
+	height: 5rem;
+	background-color: #fff;
+}
+
+.logo {
+	height: 5rem;
+	line-height: 5rem;
+}
+
+.logo a {
+	vertical-align: top;
+	font-family: 'Jost', sans-serif;
+	font-size: 3.6rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: #313131;
+}
+
+
+.menu {
+	position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	white-space: nowrap;
+	z-index: 98;
+	height: 4rem;
+	background-color: white;
+}
+
+.menu ul {
+	font-size: 0;
+	line-height: 4rem;
+	text-align: center;
+}
+
+.menu li {
+	display: inline-block;
+	width: 9rem;
+	vertical-align: top;
+}
+
+.menu .item {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #313131;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.menu .item:hover {
+	opacity: 0.5;
+}
+
+.contents {
+	margin-left: 6rem;
+	margin-right: 6rem;
+}
+
+.leftbar .left {
+	z-index: 99;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	position: fixed;
+	top:calc(50% - 19.5rem/2);
+	line-height: 6rem;
+	font-size: 1.4rem;
+	color: #313131;
+	font-weight: 500;
+}
+
+.leftbar .left span {
+	padding-bottom: 1rem;
+}
+
+.rightbar .right {
+	z-index: 99;
+	position: fixed;
+	top:calc(50% - 7.2rem/2);
+	right: 0;
+}
+
+.rightbar .right ul {
+	text-align: center;
+	width: 6rem;
+}
+
+.rightbar .right li {
+	vertical-align: top;
+}
+
+.rightbar .right a {
+	
+	display: block;
+	font-size: 1.8rem;
+	color: #313131;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.rightbar .right a:hover {
+	color: red;
+}
+
+.rightbar .right .centerline {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 0.2rem;
+	background-color: #313131;
+}
+}
+
+@media screen and (min-width:900px){
+.hamburger {
+	display: none;
+}
+
+.header {
+	text-align: center;
+	width: 100%;
+	height: 5rem;
+	background-color: #fff;
+}
+
+.logo {
+	height: 5rem;
+	line-height: 5rem;
+}
+
+.logo a {
+	vertical-align: top;
+	font-size: 3.6rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: #313131;
+}
+
+
+.menu {
+	position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	white-space: nowrap;
+	z-index: 98;
+	height: 4rem;
+	background-color: white;
+}
+
+.menu ul {
+	font-size: 0;
+	line-height: 4rem;
+	text-align: center;
+}
+
+.menu li {
+	display: inline-block;
+	width: 10rem;
+	vertical-align: top;
+}
+
+.menu .item {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #313131;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.menu .item:hover {
+	opacity: 0.5;
+}
+
+.contents {
+	margin-left: 8rem;
+	margin-right: 8rem;
+}
+
+.leftbar .left {
+	z-index: 99;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	position: fixed;
+	top:calc(50% - 21.6rem/2);
+	line-height: 8rem;
+	color: #313131;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.leftbar .left span {
+	padding-bottom: 1rem;
+}
+
+.rightbar .right {
+	z-index: 99;
+	position: fixed;
+	top:calc(50% - 7.4rem/2);
+	right: 0;
+}
+
+.rightbar .right ul {
+	text-align: center;
+	width: 8rem;
+}
+
+.rightbar .right li {
+	vertical-align: top;
+}
+
+.rightbar .right a {
+	
+	display: block;
+	font-size: 2.2rem;
+	color: #313131;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.rightbar .right a:hover {
+	color: red;
+}
+
+.rightbar .right .centerline {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 0.2rem;
+	background-color: #313131;
+}
+}
+
+main {
+	overflow: hidden;
+}
+
+.breadcrumb ol li {
+	display: inline;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.breadcrumb ol li+li:before {
+	padding: 0.3rem;
+	color: #313131;
+	content: "/\00a0";
+}
+
+.breadcrumb ol li a {
+	color: #313131;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.breadcrumb ol li a:hover {
+	opacity: 0.5;
+}
+
+.breadcrumb ol li:last-child a {
+	pointer-events: none;
+	color: #313131;
+}
+	
+
+@media screen and (max-width:599.9px) {
+.breadcrumb {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	text-align: left;
+	margin-left: 1.5rem;
+}
+}
+
+@media screen and (min-width:600px) and (max-width:899.9px) {
+.breadcrumb {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	max-width: 60rem;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	text-align: left;
+}
+}
+
+@media screen and (min-width:900px) {
+
+.breadcrumb {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	max-width: 90rem;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	text-align: left;
+}
+}
+
+@media screen and (max-width:599.9px) {
+h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+}
+}
+
+@media screen and (min-width:600px) {
+h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3rem;
+	padding-bottom: 6rem;
+}
+}
+
+.footerFixed{
+	min-height: 100vh;
+	position: relative;
+	padding-bottom: 4rem;
+	box-sizing: border-box;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+	height: 4rem;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+}
+
+footer div {
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 4rem;
+	color: white;
+	background-color: #2a2a2a;
+}
+
+footer div span {
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}

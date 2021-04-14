@@ -1,0 +1,241 @@
+@charset "utf-8";
+@media screen and (max-width:599.9px) {
+.gmail {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -1rem;
+	margin-bottom: 2rem;
+	line-height: 3.5rem;
+}
+
+.contents .base {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+form {
+    width: 100%;
+	max-width: 40rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form input {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 2.5rem;
+	padding: 1rem 1.5rem;
+    border: 0.1rem solid #313131;
+	border-radius: 1rem;
+    font-size: 1.6rem;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+form textarea {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    width: 100%;
+	vertical-align: bottom;
+    height: 15rem;
+	padding: 1rem 1.5rem;
+    border: 0.1rem solid #313131;
+	border-radius: 1rem;
+    font-size: 1.6rem;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.contact-submit {
+	text-align: center;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-submit input {
+	display: inline-block;
+	transition: 0.3s;
+	height: 4rem;
+	width: 16rem;
+	margin: 0;
+	border-radius: 0;
+	font-size: 1.6rem;
+	color: white;
+	background-color: #313131;
+	border: 0;
+}
+
+.contact-submit input:hover {
+	opacity: 0.5;
+	cursor: pointer;
+	cursor: hand;
+}
+}
+	
+@media screen and (min-width:600px) and (max-width:899.9px) {
+.gmail {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+	line-height: 3.5rem;
+}
+
+.contents .base {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+form {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+    width: 100%;
+	max-width: 60rem;
+}
+
+form input {
+    width: 100%;
+	max-width: 60rem;
+	padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    border: 0.1rem solid #313131;
+	border-radius: 1rem;
+    font-size: 1.6rem;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+form textarea {
+	vertical-align: bottom;
+    width: 100%;
+	max-width: 60rem;
+    height: 15rem;
+	padding: 1rem 1.5rem;
+    border: 0.1rem solid #313131;
+	border-radius: 1rem;
+    font-size: 1.6rem;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.contact-submit {
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-submit input {
+	display: inline-block;
+	transition: 0.3s;
+	height: 5rem;
+	width: 20rem;
+	margin: 0;
+	border-radius: 0;
+	font-size: 1.6rem;
+	color: white;
+	background-color: #313131;
+	border: 0;
+}
+
+.contact-submit input:hover {
+	opacity: 0.5;
+	cursor: pointer;
+	cursor: hand;
+}
+}	
+	
+@media screen and (min-width:900px) {
+.gmail {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+	line-height: 3.5rem;
+}
+
+.contents .base {
+	margin-left: 9rem;
+	margin-right: 9rem;
+}
+
+form {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+    width: 100%;
+	max-width: 60rem;
+}
+
+form input {
+    width: 100%;
+	max-width: 60rem;
+	padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    border: 0.1rem solid #313131;
+	border-radius: 1rem;
+    font-size: 1.6rem;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+form textarea {
+	vertical-align: bottom;
+    width: 100%;
+	max-width: 60rem;
+    height: 15rem;
+	padding: 1rem 1.5rem;
+    border: 0.1rem solid #313131;
+	border-radius: 1rem;
+    font-size: 1.6rem;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.contact-submit {
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-submit input {
+	display: inline-block;
+	transition: 0.3s;
+	height: 5rem;
+	width: 20rem;
+	margin: 0;
+	border-radius: 0;
+	font-size: 1.6rem;
+	color: white;
+	background-color: #313131;
+	border: 0;
+}
+
+.contact-submit input:hover {
+	opacity: 0.5;
+	cursor: pointer;
+	cursor: hand;
+}
+}
+
+form h4 {
+	text-align: left;
+	margin-bottom: 0.2rem;
+}
+
+form h4 span {
+	margin-left: 0.1rem;
+	margin-right: 0.1rem;
+}
+
+::placeholder {
+	color: #313131;
+	opacity: 0.4;
+}

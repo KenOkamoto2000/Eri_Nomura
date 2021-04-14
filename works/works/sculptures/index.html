@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../css/index.css">
+	<link rel="stylesheet" href="../../../css/works.css">
+		
+	<!-- フォント -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Jost&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	
+	<!-- Icomoon -->
+	<link rel="stylesheet" href="../../../icomoon/style.css">
+	
+	<!-- ページネーション -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- アイコン -->
+	<link rel="icon" href="../../../img/favicon.ico">
+	<link rel="apple-touch-icon" type="image/png" href="../../../img/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="../../../img/icon-192x192.png">
+	
+	<!-- ページタイトル -->
+	<title>Sculptures | ERI NOMURA</title>
+</head>
+
+<body>
+	<div class="footerFixed">
+	
+		<header class="header">
+			<div class="logo">
+				<a href="../../../index.html">ERI NOMURA</a>
+			</div>
+			
+			<!-- max-width 599.9px -->
+			<div class="hamburger">
+
+				<!-- チェックボックス -->
+				<input type="checkbox" id="check" class="hidden">
+
+				<!-- ハンバーガーアイコン -->
+				<label for="check" class="open"><span></span></label>
+				
+				<!-- 背景 -->
+				<label for="check" class="background"></label>
+				
+				<!-- メニュー -->
+				<div class="nav-contents">
+					<nav>
+						<ul>
+							<li class="item">
+							<a href="../../../index.html"><h3>HOME</h3></a></li>
+							
+							<li class="item">
+							<a href="../../../news/index.html"><h3>NEWS</h3></a></li>
+							
+							<li class="item">
+							<a href="../../../works/index.html"><h3>WORKS</h3></a></li>
+						
+							<li class="item">
+							<a href="../../../profile/index.html"><h3>PROFILE</h3></a></li>
+							
+							<li class="item">
+							<a href="../../../contact/index.html"><h3>CONTACT</h3></a></li>
+						</ul>
+					</nav>
+					
+					<div class="icon-box">
+						<div class="drawer-icon">
+							<a href="../../../shop/index.html" class="icon"><span class="icon-cart"></span></a>
+						</div>
+					
+						<div class="drawer-icon">
+							<div class="centerline"></div>
+							</div>
+						
+						<div class="drawer-icon">
+							<a href="https://www.instagram.com/eri_nomura_/" target=_blank class="icon"><span class="icon-instagram"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+			
+			<!-- min-width 600px -->
+		
+			<nav class="menu">
+				<div>
+					<ul>
+						<li><a href="../../../index.html" class="item">HOME</a></li>
+						<li><a href="../../../news/index.html" class="item">NEWS</a></li>
+						<li><a href="../../../works/index.html" class="item">WORKS</a></li>
+						<li><a href="../../../profile/index.html" class="item">PROFILE</a></li>
+						<li><a href="../../../contact/index.html" class="item">CONTACT</a></li>
+					</ul>
+				</div>
+			</nav>
+			
+			<div class="leftbar">
+				<div class="left"><span>Copyright</span><span>2021</span><span>ERI NOMURA</span>
+				</div>
+			</div>
+				
+			<div class="rightbar">
+				<div class="right">
+					<ul>
+						<li>
+							<a href="https://www.instagram.com/eri_nomura_/" target=_blank><span class="icon-instagram"></span></a>
+						</li>
+						<li>
+							<div class="centerline"></div>
+						</li>
+						<li>
+							<a href="../../../shop/index.html"><span class="icon-cart"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		<main>
+			<div class="contents">
+				
+				<div class="breadcrumb">
+					<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="../../../index.html"><span itemprop="name">HOME</span></a><meta itemprop="position" content="1"></li>
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="../../index.html"><span itemprop="name">WORKS</span></a><meta itemprop="position" content="2"></li>
+						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="index.html"><span itemprop="name">Sculptures</span></a><meta itemprop="position" content="3"></li>
+					</ol>
+				</div>
+				
+				<div class="works" id="all-works">
+					<div class="base" id="detail">
+						<h2>Sculptures</h2>
+					</div>
+					
+					<script>
+						$(function(){
+	
+							//分割したい個数を入力
+							var division = 12;
+	
+							//要素の数を数える
+							var divlength = $('#list section').length;
+							//分割数で割る
+							dlsizePerResult = divlength / division;
+							//分割数 刻みで後ろにmorelinkを追加する
+							for(i=1;i<=dlsizePerResult;i++){
+								$('#list section').eq(division*i-1)
+								.after('<span class="morelink link'+i+'">VIEW MORE</span>');
+							}
+							//最初のli（分割数）と、morelinkを残して他を非表示
+							$('#list section,.morelink').hide();
+							for(j=0;j<division;j++){
+								$('#list section').eq(j).show();
+							}
+							$('.morelink.link1').show();
+	
+							//morelinkにクリック時の動作
+							$('.morelink').click(function(){
+								//何個目のmorelinkがクリックされたかをカウント
+								index = $(this).index('.morelink');
+								//(クリックされたindex +2) * 分割数 = 表示数
+								for(k=0;k<(index+2)*division;k++){
+									$('#list section').eq(k).fadeIn();
+								}
+		
+								//一旦全てのmorelink削除
+								$('.morelink').hide();
+								//次のmorelink(index+1)を表示
+								$('.morelink').eq(index+1).show();
+							});
+						});
+					</script>
+					
+					<div class="flexbox" id="list">
+						
+						
+						<section>
+							<a href="sculptures/17_sea/index.html">
+							<img src="sculptures/img/17_sea_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/16_twins/index.html">
+							<img src="sculptures/img/16_twins_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/15_huddle-2/index.html">
+							<img src="sculptures/img/15_huddle-2_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/14_clergies/index.html">
+							<img src="sculptures/img/14_clergies_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/13_couple/index.html">
+							<img src="sculptures/img/13_couple_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/12_family_trip/index.html">
+							<img src="sculptures/img/12_family_trip_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/11_drunks/index.html">
+							<img src="sculptures/img/11_drunks_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/10_big_friend/index.html">
+							<img src="sculptures/img/10_big_friend_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/9_queer_object/index.html">
+							<img src="sculptures/img/9_queer_object_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/8_huddle-1/index.html">
+							<img src="sculptures/img/8_huddle-1_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/7_mask/index.html">
+							<img src="sculptures/img/7_mask_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/6_mask/index.html">
+							<img src="sculptures/img/6_mask_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/5_who_is/index.html">
+							<img src="sculptures/img/5_who_is_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/4_make-up/index.html">
+							<img src="sculptures/img/4_make-up_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/3_mask/index.html">
+							<img src="sculptures/img/3_mask_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/2_metabolism/index.html">
+							<img src="sculptures/img/2_metabolism_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/1_pit/index.html">
+							<img src="sculptures/img/1_pit_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<section>
+							<a href="sculptures/0_landscape/index.html">
+							<img src="sculptures/img/0_landscape_thumbnail.jpg" alt="1:1"></a>
+						</section>
+						
+						<!--
+						<section>
+							<a href="">
+							<img src="sculptures/img/.jpg" alt="1:1"></a>
+						</section>
+						-->
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="copyright">
+				<p><span>©</span><span>2021</span><span>ERI NOMURA</span></p>
+			</div>	
+		</footer>
+	</div>
+</body>
+</html>
