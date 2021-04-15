@@ -295,6 +295,7 @@ nav .item {
 	font-size: 1.4rem;
 	color: #313131;
 	font-weight: 500;
+	left: 0;
 }
 
 .leftbar .left span {
@@ -418,6 +419,7 @@ nav .item {
 	color: #313131;
 	font-size: 1.6rem;
 	font-weight: 500;
+	left: 0;
 }
 
 .leftbar .left span {
