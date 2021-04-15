@@ -92,7 +92,7 @@ main {
 	content: '';
 	display: block;
 	height: 0.2rem;
-	width: 2.4rem;
+	width: 3rem;
 	border-radius: 0.2rem;
 	background: #313131;
 	transition: 0.3s;
@@ -101,12 +101,12 @@ main {
 
 /* 三本線のうち一番上の棒の位置調整 */
 .open span:before {
-	bottom: 0.8rem;
+	bottom: 0.9rem;
 }
 
 /* 三本線のうち一番下の棒の位置調整 */
 .open span:after {
-	top: 0.8rem;
+	top: 0.9rem;
 }
 
 /* アイコンがクリックされたら真ん中の線を透明にする */
