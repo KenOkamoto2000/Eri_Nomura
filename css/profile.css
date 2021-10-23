@@ -2,11 +2,8 @@
 @media screen and (max-width:599.9px) {
 .frame {
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 	margin-left: 7.5%;
 	margin-right: 7.5%;
-	max-width: 36rem;
 }	
 
 .frame img {
