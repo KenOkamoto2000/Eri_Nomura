@@ -191,7 +191,7 @@
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
-.contents #exhibitions, .contents #public-collection {
+.contents #box1, .contents #box3, .contents #box5 {
 	margin-right: calc(50% - 50vw);
 	margin-left: calc(50% - 50vw);
 	padding-right: calc(50vw - 50%);
